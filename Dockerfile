@@ -18,7 +18,7 @@ RUN make install
 RUN ldconfig
 
 WORKDIR /zlog/test/fuzzers/
-clang -fsanitize=fuzzer,address -lzlog -fno-inline zlog_init_fuzzer.c -o fuzzme
+RUN clang -fsanitize=fuzzer,address -lzlog -fno-inline zlog_init_fuzzer.c -o fuzzme
 
 FROM --platform=linux/amd64 ubuntu:latest
 ## TODO: Change <Path in Builder Stage>

@@ -1,0 +1,7 @@
+project: zlog
+target: zlog
+duration: 90
+advanced_triage: true
+
+cmds:
+  - cmd: /fuzzme

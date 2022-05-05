@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include "zlog.h"
+#include <unistd.h>
 
 int
 LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
@@ -24,3 +25,5 @@ LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
 
         return 0;
 }
+
+

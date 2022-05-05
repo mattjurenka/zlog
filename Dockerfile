@@ -16,6 +16,7 @@ ENV CCX=/bin/clang
 RUN make
 RUN make install
 RUN ldconfig
+
 WORKDIR /zlog/test/fuzzers/
 RUN cmake .
 RUN make

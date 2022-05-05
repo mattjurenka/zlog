@@ -20,5 +20,6 @@ WORKDIR /zlog/test/fuzzers/
 RUN cmake .
 RUN make
 
+FROM --platform=linux/amd64 ubuntu:latest
 ## TODO: Change <Path in Builder Stage>
-COPY /zlog/test/fuzzers/fuzzme /
+COPY --from=builder /zlog/test/fuzzers/fuzzme /

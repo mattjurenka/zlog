@@ -18,7 +18,8 @@ RUN make install
 RUN ldconfig
 
 WORKDIR /zlog/test/fuzzers/
-RUN clang -fsanitize=fuzzer,address -lzlog -fno-inline zlog_init_fuzzer.c -o fuzzme
+RUN clang -fsanitize=fuzzer,address -fno-inline zlog_init_fuzzer.c /zlog/src/libzlog.a -o fuzzme
+RUN ldconfig
 RUN ls
 RUN pwd
 RUN ls /

@@ -5,4 +5,3 @@ advanced_triage: true
 
 cmds:
   - cmd: /fuzzme
-    libfuzzer: true

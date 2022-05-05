@@ -29,3 +29,5 @@ COPY --from=builder /zlog/test/fuzzers/fuzzme /
 RUN ls -l /
 RUN chmod a+x /fuzzme
 RUN ls -l /
+ENTRYPOINT []
+CMD /fuzzme

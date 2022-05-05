@@ -20,15 +20,10 @@ RUN ldconfig
 WORKDIR /zlog/test/fuzzers/
 RUN clang -fsanitize=fuzzer,address -fno-inline zlog_init_fuzzer.c /zlog/src/libzlog.a -o fuzzme
 RUN ldconfig
-RUN ls
-RUN pwd
-RUN ls /
 
 FROM --platform=linux/amd64 ubuntu:latest
 ## TODO: Change <Path in Builder Stage>
 COPY --from=builder /zlog/test/fuzzers/fuzzme /
-RUN ls -l /
-RUN chmod a+x /fuzzme
-RUN ls -l /
+
 ENTRYPOINT []
 CMD /fuzzme

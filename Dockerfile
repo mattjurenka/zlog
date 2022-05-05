@@ -20,4 +20,4 @@ RUN cmake .
 RUN make
 
 ## TODO: Change <Path in Builder Stage>
-COPY --from=builder /zlog/test/fuzzers/fuzzme /
+COPY /zlog/test/fuzzers/fuzzme /
